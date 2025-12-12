@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Finnish Passphrase Generator – Support</title>
+<meta name="description" content="Support page for Finnish Passphrase Generator. Contact support, report bugs, request features, and view licensing information." />
+
+<style>
+  :root{
+    --bg:#f5f5f7;
+    --card:#ffffff;
+    --text:#1c1c1e;
+    --sub:#6e6e73;
+    --line:#e5e5ea;
+    --blue:#0078ff;
+    --blue2:#005fcc;
+    --chip:#f2f2f7;
+  }
+  *{box-sizing:border-box}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    margin:0; background:var(--bg); color:var(--text); line-height:1.6;
+  }
+  header{
+    background:var(--card); border-bottom:1px solid var(--line);
+    padding:18px 16px;
+  }
+  header .wrap{
+    max-width:900px; margin:0 auto;
+    display:flex; flex-direction:column; gap:6px;
+  }
+  h1{margin:0; font-size:1.65rem; font-weight:800;}
+  .tagline{margin:0; color:var(--sub); font-size:0.95rem;}
+  main{padding:20px 16px;}
+  .wrap{max-width:900px; margin:0 auto;}
+  .grid{
+    display:grid; gap:14px;
+    grid-template-columns:1fr;
+  }
+  @media (min-width:840px){
+    .grid{grid-template-columns:1fr 1fr;}
+  }
+  .card{
+    background:var(--card); border:1px solid var(--line);
+    border-radius:14px; padding:18px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+  }
+  h2{margin:0 0 10px 0; font-size:1.15rem;}
+  p{margin:0 0 10px 0;}
+  ul{margin:8px 0 0 18px; padding:0;}
+  .muted{color:var(--sub); font-size:0.95rem;}
+  .buttons{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;}
+  a.button{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 14px; border-radius:10px;
+    text-decoration:none; font-weight:700;
+    background:var(--blue); color:#fff;
+  }
+  a.button:hover{background:var(--blue2);}
+  a.secondary{
+    background:var(--chip); color:var(--text); font-weight:700;
+    border:1px solid var(--line);
+  }
+  a.secondary:hover{filter:brightness(0.98);}
+  code, .chip{
+    background:var(--chip); border:1px solid var(--line);
+    border-radius:10px; padding:2px 8px; font-size:0.9rem;
+  }
+  details{
+    border:1px solid var(--line); border-radius:12px;
+    padding:12px; background:#fff;
+  }
+  summary{cursor:pointer; font-weight:800;}
+  footer{
+    padding:22px 16px; text-align:center; color:var(--sub);
+    font-size:0.85rem;
+  }
+  .row{display:flex; flex-wrap:wrap; gap:8px; align-items:center;}
+  .small{font-size:0.9rem;}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <h1>Finnish Passphrase Generator – Support</h1>
+    <p class="tagline">Help, contact, bug reports, feature requests, and licensing information.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- CONFIG -->
+    <!-- Replace these values with your real GitHub user + repo -->
+    <script>
+      const GH_USER = "YOUR_GITHUB_USER";
+      const GH_REPO = "YOUR_REPO";
+
+      // Optional: your support email (mailto)
+      const SUPPORT_EMAIL = "your-support-email@example.com";
+
+      // Build useful URLs
+      const repoUrl = `https://github.com/${GH_USER}/${GH_REPO}`;
+      const issuesUrl = `${repoUrl}/issues`;
+      const discussionsUrl = `${repoUrl}/discussions`;
+      const releasesUrl = `${repoUrl}/releases`;
+      const newBugUrl = `${repoUrl}/issues/new?title=${encodeURIComponent("Bug: ")}&body=${encodeURIComponent(
+        "Device:\n iOS version:\n App version:\n\nWhat happened?\n\nSteps to reproduce:\n1.\n2.\n3.\n\nExpected result:\n\nScreenshots (optional):\n"
+      )}`;
+      const newFeatureUrl = `${repoUrl}/issues/new?title=${encodeURIComponent("Feature request: ")}&body=${encodeURIComponent(
+        "What would you like to add or improve?\n\nWhy is this useful?\n\nAny examples or screenshots?\n"
+      )}`;
+      const mailtoUrl = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Finnish Passphrase Generator – Support")}&body=${encodeURIComponent(
+        "Hi!\n\nApp version:\nDevice:\niOS version:\n\nQuestion / issue:\n\n"
+      )}`;
+
+      // Inject into the page
+      window.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-repo]").forEach(a => a.href = repoUrl);
+        document.querySelectorAll("[data-issues]").forEach(a => a.href = issuesUrl);
+        document.querySelectorAll("[data-discussions]").forEach(a => a.href = discussionsUrl);
+        document.querySelectorAll("[data-releases]").forEach(a => a.href = releasesUrl);
+        document.querySelectorAll("[data-new-bug]").forEach(a => a.href = newBugUrl);
+        document.querySelectorAll("[data-new-feature]").forEach(a => a.href = newFeatureUrl);
+        document.querySelectorAll("[data-mailto]").forEach(a => a.href = mailtoUrl);
+        document.getElementById("repoName").textContent = `${GH_USER}/${GH_REPO}`;
+      });
+    </script>
+
+    <div class="grid">
+
+      <section class="card">
+        <h2>About the App</h2>
+        <p>
+          Finnish Passphrase Generator creates secure, memorable passphrases using Finnish words.
+          Everything is generated locally on your device.
+        </p>
+        <ul>
+          <li>Choose number of words and max word length</li>
+          <li>Set capitalization and separators</li>
+          <li>Advanced options (premium): diacritics, avoid similar characters, replacements</li>
+          <li>Strength estimation using entropy (premium)</li>
+        </ul>
+
+        <div class="buttons">
+          <a class="button secondary" data-repo target="_blank" rel="noopener">View GitHub Repo</a>
+          <a class="button secondary" data-releases target="_blank" rel="noopener">Changelog / Releases</a>
+        </div>
+        <p class="muted small" style="margin-top:10px;">
+          Repo: <span class="chip" id="repoName">YOUR_GITHUB_USER/YOUR_REPO</span>
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Get Support</h2>
+        <p>If you need help, you can contact support by email or via GitHub.</p>
+
+        <div class="buttons">
+          <a class="button" data-mailto>Email Support</a>
+          <a class="button secondary" data-discussions target="_blank" rel="noopener">Ask a Question (Discussions)</a>
+          <a class="button secondary" data-issues target="_blank" rel="noopener">Browse Issues</a>
+        </div>
+
+        <p class="muted small" style="margin-top:10px;">
+          Tip: GitHub Issues is best for bugs. Discussions is best for questions.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Report a Bug / Request a Feature</h2>
+        <p>These buttons open a pre-filled GitHub issue template (no server required).</p>
+
+        <div class="buttons">
+          <a class="button" data-new-bug target="_blank" rel="noopener">Report a Bug</a>
+          <a class="button secondary" data-new-feature target="_blank" rel="noopener">Request a Feature</a>
+        </div>
+
+        <p class="muted small" style="margin-top:10px;">
+          Please include: device model, iOS version, app version, steps to reproduce.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Dictionary License (Kotus)</h2>
+        <p>
+          This app uses the Kotus Finnish word list (Nykysuomen sanalista, version 1),
+          published by the Institute for the Languages of Finland (Kotus).
+        </p>
+        <p class="muted">
+          The Kotus word list is licensed under the GNU Lesser General Public License (LGPL).
+          The license text and attribution are included in the app.
+        </p>
+
+        <div class="buttons">
+          <a class="button secondary" href="http://www.kotus.fi" target="_blank" rel="noopener">Kotus Website</a>
+          <a class="button secondary" data-repo target="_blank" rel="noopener">View License Files on GitHub</a>
+        </div>
+      </section>
+
+    </div>
+
+    <section class="card" style="margin-top:14px;">
+      <h2>Troubleshooting / FAQ</h2>
+
+      <details>
+        <summary>Passphrase says “No words available”</summary>
+        <p class="muted" style="margin-top:8px;">
+          This usually means your max word length is too small or the dictionary has not finished loading.
+          Please wait until the loading indicator completes, or increase “Max length”.
+        </p>
+      </details>
+
+      <details style="margin-top:10px;">
+        <summary>Premium purchase does not unlock features</summary>
+        <p class="muted" style="margin-top:8px;">
+          Try “Restore purchases”. If you are using TestFlight, premium features may already be unlocked for testing.
+          If the issue persists, contact support.
+        </p>
+      </details>
+
+      <details style="margin-top:10px;">
+        <summary>Does the app collect any personal data?</summary>
+        <p class="muted" style="margin-top:8px;">
+          The app is designed to work offline. Passphrases are generated locally on your device.
+          No analytics or personal tracking is required for basic functionality.
+        </p>
+      </details>
+
+      <p class="muted small" style="margin-top:12px;">
+        More help: <a data-discussions target="_blank" rel="noopener">GitHub Discussions</a> ·
+        Bugs: <a data-issues target="_blank" rel="noopener">GitHub Issues</a>
+      </p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Finnish Passphrase Generator · Support page hosted as a static site.
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</footer>
+
+</body>
+</html>
