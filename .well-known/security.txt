@@ -1,0 +1,3 @@
+Contact: mailto:support@YOURDOMAIN
+Preferred-Languages: en, fi
+Policy: https://YOUR_PAGES_URL/privacy.html
