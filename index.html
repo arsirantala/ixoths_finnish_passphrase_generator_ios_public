@@ -149,12 +149,16 @@
       const EMAIL_DOMAIN = "elisanet.fi"; // ← CHANGE THIS
 
       function emailSupport() {
-        const addr = EMAIL_USER + "@" + EMAIL_DOMAIN;
-        const subject = encodeURIComponent("Finnish Passphrase Generator – Support");
-        const body = encodeURIComponent(
-          "App version:\nDevice:\niOS version:\n\nDescribe your issue:\n"
-        );
-        window.location.href = "mailto:" + addr + "?subject=" + subject + "&body=" + body;
+          const addr = `${EMAIL_USER}@${EMAIL_DOMAIN}`;
+          const subject = "Finnish Passphrase Generator – Support";
+          const body =
+            "App version:%0D%0A" +
+            "Device:%0D%0A" +
+            "iOS version:%0D%0A%0D%0A" +
+            "Describe your issue:%0D%0A";
+      
+          // tälle ei tarvita encodeURIComponentia, kun käytetään valmiiksi CRLF ja vältetään erikoismerkit
+          window.location.href = `mailto:${addr}?subject=${encodeURIComponent(subject)}&body=${body}`;
       }
 
       function openIssues() {
