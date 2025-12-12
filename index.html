@@ -171,6 +171,17 @@
           window.open(ISSUES_URL, "_blank", "noopener,noreferrer");
         }
       }
+      
+      function copySupportEmail() {
+        const addr = `${EMAIL_USER}@${EMAIL_DOMAIN}`;
+        navigator.clipboard?.writeText(addr).then(() => {
+          document.getElementById("copyHint").textContent = "Copied!";
+          setTimeout(() => document.getElementById("copyHint").textContent = "", 1500);
+        }).catch(() => {
+          // fallback jos clipboard API ei toimi
+          prompt("Copy this email address:", addr);
+        });
+      }
     </script>
 
     <div class="grid">
@@ -218,6 +229,8 @@
 
         <div class="buttons">
           <button class="button" onclick="emailSupport()">Email Support</button>
+          <button class="button secondary" onclick="copySupportEmail()">Copy email</button>
+          <span id="copyHint" style="margin-left:8px;color:var(--sub);font-size:0.9rem;"></span>
           <button class="button secondary" onclick="openIssues()">GitHub Issues</button>
         </div>
       </section>
